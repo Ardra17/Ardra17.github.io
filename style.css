@@ -1,0 +1,168 @@
+ /* Base Configuration */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F8F8; /* Light Background */
+            color: #111827; /* Dark Gray text */
+            margin: 0;
+            padding: 32px; /* Base padding */
+            scroll-behavior: smooth;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        .section-card {
+            background-color: #FFFFFF; /* Pure White for cards */
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 64px;
+        }
+        
+        h1 { font-size: 48px; font-weight: 800; margin-bottom: 8px; }
+        h2 { 
+            font-size: 32px; 
+            font-weight: 700; 
+            margin-bottom: 24px; 
+            border-bottom: 2px solid #111827; 
+            padding-bottom: 8px; 
+        }
+        h3 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
+
+        /* Links and Buttons */
+        a {
+            color: #111827;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #4B5563; /* Medium Gray on hover */
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 32px;
+            background-color: #111827; /* Dark background */
+            color: #FFFFFF; /* White text */
+            font-weight: 700;
+            border-radius: 9999px; /* Fully rounded */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #374151;
+            transform: scale(1.05);
+            color: #FFFFFF; 
+        }
+
+        /* Navbar Styling */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 9999px;
+            margin-bottom: 48px;
+            padding: 12px 24px;
+            display: none; /* Hide by default, show on desktop */
+            justify-content: center;
+            align-items: center;
+        }
+        nav a {
+            margin: 0 16px;
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        /* Skills Chips Styling */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+        .skill-chip {
+            background-color: #E5E7EB; /* Light Gray */
+            color: #111827; /* Dark Text */
+            text-align: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            cursor: default;
+        }
+        .skill-chip:hover {
+            background-color: #D1D5DB; /* Slightly darker gray on hover */
+        }
+
+        /* Contact & Footer */
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+        }
+        .contact-button {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .contact-button.primary {
+            background-color: #111827;
+            color: #FFFFFF;
+        }
+        .contact-button.secondary {
+            background-color: #E5E7EB;
+            color: #111827;
+        }
+
+        /* Styles for Education Section (NEW) */
+        .education-item {
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #E5E7EB; /* Light gray separator */
+        }
+        .education-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .institution-name {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #111827;
+        }
+        .degree-info {
+            font-style: italic;
+            color: #4B5563;
+            margin-bottom: 4px;
+        }
+        .dates {
+            color: #6B7280;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .coursework-list {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #374151;
+            font-size: 15px;
+        }
+
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            body { padding: 40px; }
+            nav { display: flex; }
+            .contact-links { flex-direction: row; gap: 24px; }
+        }
